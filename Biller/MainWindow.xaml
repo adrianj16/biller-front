@@ -1,0 +1,108 @@
+﻿<Window x:Class="Biller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biller"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None"
+        AllowsTransparency="True"        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="GridBarraTitulo" Grid.Column="2" Background="DarkBlue" MouseDown="GridBarraTitulo_MouseDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="35" Width="35" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                    <materialDesign:PackIcon Kind="Settings"/>
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="35" Width="35" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                    <materialDesign:PackIcon Kind="Account"/>
+                </Button>
+                <Button x:Name="Shutdown" Click="Shutdown_Click" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="25" Width="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                    <materialDesign:PackIcon Kind="Power"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.RowSpan="2" Grid.Column="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF58789E" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFFDFDFD" RenderingBias="Quality" ShadowDepth="1"></DropShadowEffect>
+            </Grid.Effect>-->
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE0E6ED" Offset="1"/>
+                        <GradientStop Color="DarkBlue" Offset="0.653"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <TextBlock Text="Biller" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Book Antiqua"/>
+            </Grid>
+
+            <StackPanel Grid.Row="1">
+                <Button Margin="10" Background="DarkBlue">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="ViewDashboard"/>
+                        <TextBlock Text="Dashboard" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="DarkBlue">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="ContentPaste"/>
+                        <TextBlock Text="Pedidos" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="DarkBlue">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="TshirtCrew"/>
+                        <TextBlock Text="Productos" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="DarkBlue">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="FormatListChecks"/>
+                        <TextBlock Text="Inventario" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="DarkBlue">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="TruckDelivery"/>
+                        <TextBlock Text="Seguimiento" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="DarkBlue">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Printer"/>
+                        <TextBlock Text="Reportes" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

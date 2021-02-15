@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Biller.View.Clients"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Biller.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White" >
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Height="23" Margin="18,87,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="Address" HorizontalAlignment="Left" Height="23" Margin="17,131,0,0" TextWrapping="Wrap" Text="Adress" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="Document" HorizontalAlignment="Left" Height="23" Margin="61,47,0,0" TextWrapping="Wrap" Text="Document" VerticalAlignment="Top" Width="151"/>
+        <ComboBox x:Name="TypeClient"  HorizontalAlignment="Left" Margin="18,39,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.655,0.756"/>
+        <ComboBox x:Name="TypeDocument"  HorizontalAlignment="Left" Margin="18,168,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.655,0.756"/>
+        <Button Click="Create_BTN_Click" Content="Create" HorizontalAlignment="Left" Margin="16,220,0,0" VerticalAlignment="Top" Width="162"/>
+
+    </Grid>
+</UserControl>
